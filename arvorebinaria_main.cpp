@@ -51,13 +51,13 @@ int main(){
              cout << "Digite 3 para imprimir em pos ordem!\n";
              cin >> imp;
              if (imp == 1){
-                cout << "1";
+                cout << "1\n";
                 Arvorealunos.imprimirPre(Arvorealunos.obterRaiz());
              } else if (imp ==2){
-                cout << "2";
+                cout << "2\n";
                 Arvorealunos.imprimirEm(Arvorealunos.obterRaiz());
              } else {
-                cout << "3";
+                cout << "3\n";
                 Arvorealunos.imprimirPos(Arvorealunos.obterRaiz());
              }           
         } 

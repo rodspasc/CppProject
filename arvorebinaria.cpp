@@ -111,7 +111,7 @@ void ArvoreBinariaBusca::remover(Aluno aluno){
     removerbusca(aluno, raiz);
 }
 
-void ArvoreBinariaBusca::buscar(Aluno aluno, bool& busca){
+void ArvoreBinariaBusca::buscar(Aluno& aluno, bool& busca){
     busca = false;
     No* noatual = raiz;
     while (noatual != NULL){
@@ -132,7 +132,7 @@ void ArvoreBinariaBusca::imprimirPre(No* Noatual){
         cout << Noatual->aluno.obterNome() << ": ";
         cout << Noatual->aluno.obterRa() << endl;
         imprimirPre(Noatual->filhoesquerda);
-        imprimirPre(Noatual->filhoesquerda);
+        imprimirPre(Noatual->filhodireita);
     }
 }
 
@@ -148,7 +148,7 @@ void ArvoreBinariaBusca::imprimirEm(No* Noatual){
 void ArvoreBinariaBusca::imprimirPos(No* Noatual){
     if (Noatual != NULL){
         imprimirPos(Noatual->filhoesquerda);
-        imprimirPos(Noatual->filhoesquerda);
+        imprimirPos(Noatual->filhodireita);
         cout << Noatual->aluno.obterNome() << ": ";
         cout << Noatual->aluno.obterRa() << endl;
     }
